@@ -1,5 +1,9 @@
-@extends('layouts.app')
-@section('content')
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Categorias') }}
+        </h2>
+    </x-slot>
 @if(session('success'))
     <div class="alert alert-success">
         {{ session('success') }}
@@ -9,9 +13,7 @@
     <div class="container py-4">
         <h1>Lista de Categorias</h1>
         <a href="/categorias/create" class="btn btn-primary my-4">Crear Categoria</a>
-    </div>
-
-    <div class="table-responsive">
+        <div class="table-responsive">
         <table class="table table-bordered table-striped table-hover">
             <thead class="table-primary">
                 <tr>
@@ -41,5 +43,7 @@
             </tbody>
         </table>
     </div>
-@endsection    
+    </div>
+
     
+</x-app-layout>

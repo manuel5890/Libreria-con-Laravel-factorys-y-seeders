@@ -1,5 +1,13 @@
-@extends('layouts.app')
-@section('content')
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Crear Categoria') }}
+        </h2>
+    </x-slot>
+
+    <div class="container py-4">
+        <h1>Crear Nueva Categoria</h1>
+        <a href="/categorias" class="btn btn-secondary my-4">Volver a Categorias</a>
 
 <!-- formulario de creación de categorías -->
 <form action="/categorias" method="POST">
@@ -18,4 +26,4 @@
     <button type="submit" class="btn btn-primary">Crear Categoría</button>
 </form>
 
-@endsection
+</x-app-layout>
