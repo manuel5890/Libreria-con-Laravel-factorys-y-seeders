@@ -7,23 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Instrument Sans', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-                "Helvetica Neue", Arial, sans-serif;
-            background-color: #f4f6f8;
-            color: #333;
-        }
-        header, footer {
-            background-color: #ffffff;
-        }
-        /* make table cells vertically centered and add subtle shadow */
-        .table th, .table td { vertical-align: middle; }
-        .table { box-shadow: 0 0 10px rgba(0,0,0,0.05); }
-        .table thead { background-color: #0d6efd; color: #fff; }
-        .btn-sm { padding: .25rem .5rem; font-size: .875rem; }
-        footer p { margin: 0; }
-    </style>
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <title>Biblioteca</title>
 </head>
 <body>

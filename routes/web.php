@@ -12,6 +12,12 @@ use App\Http\Controllers\CategoriasController;
 // Route::resource('categorias', CategoriasController::class);
 
 
+// ruta de la landing page
+
+Route::get('/', function () {return view('welcome');
+});
+
+
 // rutas de las categorias
 
 Route::get('/categorias', [CategoriasController::class, 'index']);
