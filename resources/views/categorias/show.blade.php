@@ -1,25 +1,23 @@
 @extends('layouts.app')
 @section('content')
 
-<div class="container">
-    <h1>Detalles del categoria</h1>
-</div>
-<div class="row">
-    <div class="col-md-6">
-        <img src="https://m.media-amazon.com/images/I/61HYTlq+hVL.jpg" alt="categoria">
-    </div>
-    <div class="col-md-6">
-        <h2>Nombre: {{$categorias->nombre}}</h2>
-        <h3>Descripcion: {{$categorias->descripcion}}</h3>
-        <p>Estado:
-            <!-- esto es para ponerle una mascara al estado para que no apareza 1 sino "Activo" o "Inactivo" -->
-            @if($categorias->estado == 1)
-                Activo
-            @else
-                Inactivo
-            @endif
-        </p>
+<div class="container py-4">
+    <h1 class="mb-3">Detalles de la categoría</h1>
 
+    <div class="card shadow-sm">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="https://www.lucushost.com/blog/wp-content/uploads/2019/06/a%C3%B1adir-categor%C3%ADas-en-WordPress.png" class="img-fluid rounded-start" alt="categoria">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">{{$categorias->nombre}}</h5>
+                    <p class="card-text">{{$categorias->descripcion}}</p>
+                    <p class="card-text"><small class="text-muted">Estado: {{$categorias->estado ? 'Activo' : 'Inactivo'}}</small></p>
+                    <a href="/categorias" class="btn btn-primary btn-sm">Volver</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
